@@ -1,6 +1,7 @@
 # entrance_management
 拠点の入退室管理
 
+以下デプロイの方法について示す
 # モジュールのインストール
 - PCにnode.jsをインストールしてから、npmコマンドで下記を実行
 ```
@@ -40,7 +41,12 @@ npm i -g @google/clasp
 SP.setProperty('SSID', 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 ```
 
-# clasp操作
+- なお、スプレッドシートの項目は下記を参考にすること
+
+| 時刻  | 入退室種別 | 名前 | エアコン停止 | 空間共有PC電源OFF | 消灯 | 換気扇停止 | ALSOK警備開始 | 備考 |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+
+# 閑話（clasp操作のコマンド紹介）
 - clasp login :googleアカウントへのログイン
 - clasp push  :GASエディタへのソース反映
 - clasp pull  :GASエディタの内容を取得(GAS内のgsファイルがjsファイルに変換されて落ちて来て上書きされてしまうため注意！)
@@ -61,7 +67,11 @@ Authorization successful.
 # claspでGASにソースをpush
 1. ログイン後に下記コマンドでソースをpushするとclasp.jsonで設定したscriptIdのGASエディタにソースがアップロードされる
 
-# デプロイ
+```
+clasp push
+```
+
+# 仮デプロイ
 1. push後、ブラウザからGASエディタを開き、「デプロイ」ボタンからデプロイを実施する
 2. デプロイ後にアプリケーションのURLが払い出されるため、そのアプリURLをメモしておく
 
@@ -74,5 +84,6 @@ Authorization successful.
 1. 再度ブラウザからGASエディタ画面を開き、action属性にアプリURLが反映されていることを確認する
 2. GASエディタから「デプロイ」ボタンで再度デプロイを実行する(その際に固定URLでデプロイすること)
 [GoogleAppsScript(GAS)を固定URLでデプロイする方法](https://codeaid.jp/gas-deploy/)
+3. デプロイ完了！
 
 
