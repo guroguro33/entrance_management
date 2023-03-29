@@ -1,5 +1,6 @@
 
 const SP: GoogleAppsScript.Properties.Properties = PropertiesService.getScriptProperties();
+// 入退室管理を記録するスプレッドシートIDを登録する
 SP.setProperty('SSID', '1QN1SbJwhBVe1QerW9wD_aHCS8z2iqZiNoEpLfT2cyvY');
 SP.setProperty('SHEET_NAME', '入退室管理');
 SP.setProperty('LAST_LEAVE', '最終退室');
