@@ -58,6 +58,21 @@ clasp login
 Authorization successful.
 ```
 
-# アクション属性の設定
-src\index.html
-formのアクション属性にデプロイ後のアプリのURLを指定する
+# claspでGASにソースをpush
+1. ログイン後に下記コマンドでソースをpushするとclasp.jsonで設定したscriptIdのGASエディタにソースがアップロードされる
+
+# デプロイ
+1. push後、ブラウザからGASエディタを開き、「デプロイ」ボタンからデプロイを実施する
+2. デプロイ後にアプリケーションのURLが払い出されるため、そのアプリURLをメモしておく
+
+# formタグのaction属性の設定
+1. src\index.htmlファイルを開く
+2. formのaction属性にデプロイ後のアプリURLを登録する
+3. clasp pushコマンドで再度pushする
+
+# 再デプロイ
+1. 再度ブラウザからGASエディタ画面を開き、action属性にアプリURLが反映されていることを確認する
+2. GASエディタから「デプロイ」ボタンで再度デプロイを実行する(その際に固定URLでデプロイすること)
+[GoogleAppsScript(GAS)を固定URLでデプロイする方法](https://codeaid.jp/gas-deploy/)
+
+
