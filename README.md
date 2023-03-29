@@ -2,7 +2,10 @@
 拠点の入退室管理
 
 # モジュールのインストール
+- PCにnode.jsをインストールしてから、npmコマンドで下記を実行
+```
 npm install
+```
 
 # claspについて
 ## claspとは
@@ -13,7 +16,7 @@ npm install
   - TypeScriptが使用できる
 
 ## claspのインストール
-PCにnode.jsをインストールしてから、npmコマンドでclaspをグローバルインストールしてください
+- claspをグローバルインストールしてください
 ```bash
 npm i -g @google/clasp
 ```
